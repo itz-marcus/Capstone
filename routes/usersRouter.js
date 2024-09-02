@@ -5,7 +5,7 @@ const userRouter = express.Router()
 
 userRouter.post('/login',checkUser,loginUser)
 
-userRouter.get('/getData',fetchUser)
+userRouter.get('',fetchUser)
 
 userRouter.get('/:id',fetchUserById)
 

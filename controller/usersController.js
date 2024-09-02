@@ -34,9 +34,9 @@ const updateUserInfo = async(req,res)=>{
 
     firstname ? firstname=firstname: firstname = User.firstname
     lastname ? lastname=lastname: lastname = User.lastname
-    age ? age=age: age = User.age
-    email ? email=email: email = User.email
-    password ? password=password: password = User.password
+    age ? age=age: age = User.userAge
+    email ? email=email: email = User.userEmail
+    password ? password=password: password = User.userPassword
     await updateUserInfoDb(firstname,lastname,age,email,password,req.params.id)
     res.send(await getUserDb())
 }
