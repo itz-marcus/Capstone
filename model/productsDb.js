@@ -25,7 +25,7 @@ const deleteProductDb = async(id)=>{
 )
 }
 
-const updateProductDb = async(prodName,prodDesc,prodPrice,prodImage,prodID)=>{
+const updateProductDb = async(prodName,prodDesc,prodPrice,prodImage,id)=>{
     await pool.query(`
         UPDATE products SET prodName = ?,prodDesc =?,prodPrice = ?,prodImage = ? WHERE prodID = ?`,[prodName,prodDesc,prodPrice,prodImage,id])
 }

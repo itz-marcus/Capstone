@@ -27,11 +27,11 @@ const updateProduct = async(req,res)=>{
     
     let {prodName,prodDesc,prodPrice,prodImage} = req.body
 
-    let Product = await getProductByNameDb(req.params.prodName) 
+    let Product = await getProductByIdDb(req.params.id) 
     
     prodName ? prodName=prodName: prodName = Product.prodName
     prodDesc ? prodDesc=prodDesc: prodDesc = Product.prodDesc
-    prodDesc ? prodDesc=prodDesc: prodDesc = Product.prodDesc
+    prodPrice ? prodPrice=prodPrice: prodPrice = Product.prodPrice
     prodImage ? prodImage=prodImage: prodImage = Product.prodImage
     await updateProductDb(prodName,prodDesc,prodPrice,prodImage,req.params.id)
     res.send(await getProductsDb())
