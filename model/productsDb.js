@@ -5,8 +5,8 @@ const getProductsDb = async()=>{
     return data
 }
 
-const getProductByNameDb = async(prodName)=>{
-    let [[data]] = await pool.query('SELECT * FROM products WHERE prodName = ?',[prodName] )
+const getProductByIdDb = async(id)=>{
+    let [[data]] = await pool.query('SELECT * FROM products WHERE prodID = ?',[id] )
     return data
 }
 
@@ -35,4 +35,4 @@ const addToCartDb = async(id_prod,id_user)=>{
 
 }
 
-export {getProductsDb, getProductByNameDb, insertProductDb, deleteProductDb, updateProductDb, addToCartDb}
+export {getProductsDb, getProductByIdDb, insertProductDb, deleteProductDb, updateProductDb, addToCartDb}

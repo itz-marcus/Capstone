@@ -1,4 +1,4 @@
-import { getProductsDb, getProductByNameDb, insertProductDb, deleteProductDb, updateProductDb, addToCartDb} from "../model/productsDb.js";
+import { getProductsDb, getProductByIdDb, insertProductDb, deleteProductDb, updateProductDb, addToCartDb} from "../model/productsDb.js";
 import { getUserByIdDb } from "../model/usersDb.js";
 
 
@@ -6,8 +6,8 @@ const fetchProductsInfo = async(req,res)=>{
     res.json(await getProductsDb()) 
 }
 
-const fetchProductByName = async(req,res)=>{
-    res.json(await getProductByNameDb(req.params.prodName)) 
+const fetchProductById = async(req,res)=>{
+    res.json(await getProductByIdDb(req.params.id)) 
 }
 
 const insertProduct = async(req,res)=>{
@@ -44,4 +44,4 @@ const addToCart = async(req,res)=>{
     await addToCartDb(req.body.id,id)
     res.json({message:"you've added a fruit successfully to your cart"})
 }
-export{fetchProductsInfo, fetchProductByName, insertProduct, deleteProduct, updateProduct, addToCart}
+export{fetchProductsInfo, fetchProductById, insertProduct, deleteProduct, updateProduct, addToCart}

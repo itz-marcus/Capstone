@@ -1,5 +1,5 @@
 import express from 'express'
-import {fetchProductsInfo, fetchProductByName, insertProduct, deleteProduct, updateProduct,addToCart} from '../controller/productsController.js'
+import {fetchProductsInfo, fetchProductById, insertProduct, deleteProduct, updateProduct,addToCart} from '../controller/productsController.js'
 import {verifyAToken} from "../middleware/authenticate.js"
 import { config } from 'dotenv'
 config()
@@ -9,7 +9,7 @@ productRouter.get('',fetchProductsInfo)
 
 productRouter.get('/cart',verifyAToken,addToCart)
 
-productRouter.get('/:id',fetchProductByName)
+productRouter.get('/:id',fetchProductById)
 
 productRouter.post('/insert', insertProduct)
 
