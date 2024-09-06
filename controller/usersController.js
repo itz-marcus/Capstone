@@ -1,8 +1,12 @@
-import { getUserDb, getUserByIdDb, insertUserDb, deleteUserDb, updateUserInfoDb} from "../model/usersDb.js";
+import { getUserDb, getUserByEmailDb, getUserByIdDb, insertUserDb, deleteUserDb, updateUserInfoDb} from "../model/usersDb.js";
 import {hash} from 'bcrypt'
 
 const fetchUser = async(req,res)=>{
     res.json(await getUserDb()) 
+}
+
+const fetchUserByEmail = async(req,res)=>{
+    res.json(await getUserByEmailDb(req.params.email))
 }
 
 const fetchUserById = async(req,res)=>{
@@ -45,4 +49,4 @@ const loginUser = (req,res)=>{
         message:"User logged in Successfully",token:req.body.token
     })
 }
-export{fetchUser, fetchUserById, insertUser, deleteUser, updateUserInfo,loginUser}
+export{fetchUser, fetchUserByEmail, fetchUserById, insertUser, deleteUser, updateUserInfo,loginUser}

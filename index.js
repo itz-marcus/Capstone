@@ -1,6 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 import { userRouter } from './routes/usersRouter.js'
+import { productRouter } from './routes/productsRouter.js'
+
 
 let port = process.env.PORT || 5004
 const app = express()
@@ -13,6 +15,8 @@ app.use(cors({
 }))
 
 app.use('/users',userRouter)
+
+app.use('/products',productRouter)
 
 app.listen(port,()=>{
     console.log(`http://localhost:${port}`)
