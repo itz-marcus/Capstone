@@ -29,9 +29,9 @@ const deleteUserDb = async(id)=>{
     [id])
 }
 
-const updateUserInfoDb = async(firstname,lastname,age,email,password,id)=>{
+const updateUserInfoDb = async(firstname,lastname,age,email,password,image,id)=>{
     await pool.query(`
-        UPDATE users SET firstname = ?,lastname =?,userAge = ?,userEmail = ?, userPassword = ? WHERE userID = ?`,[firstname,lastname,age,email,password,id])
+        UPDATE users SET firstname = ?,lastname =?,userAge = ?,userEmail = ?, userPassword = ?, userImage = ? WHERE userID = ?`,[firstname,lastname,age,email,password,image,id])
 }
 
 export {getUserDb, getUserByEmailDb, getUserByIdDb, insertUserDb, deleteUserDb, updateUserInfoDb}

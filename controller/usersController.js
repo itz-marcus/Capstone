@@ -32,7 +32,7 @@ const deleteUser = async(req,res)=>{
 
 const updateUserInfo = async(req,res)=>{
     
-    let {firstname,lastname,age,email,password} = req.body
+    let {firstname,lastname,age,email,password,image} = req.body
 
     let User = await getUserByIdDb(req.params.id) 
 
@@ -41,7 +41,8 @@ const updateUserInfo = async(req,res)=>{
     age ? age=age: age = User.userAge
     email ? email=email: email = User.userEmail
     password ? password=password: password = User.userPassword
-    await updateUserInfoDb(firstname,lastname,age,email,password,req.params.id)
+    image ? image=image: image = User.userImage
+    await updateUserInfoDb(firstname,lastname,age,email,password,image,req.params.id)
     res.send(await getUserDb())
 }
 const loginUser = (req,res)=>{
