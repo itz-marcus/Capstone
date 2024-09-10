@@ -72,7 +72,7 @@ margin-top: 1.5vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 3vw;
+  font-size: 2.1vw;
 }
 
 #secNav a {
