@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <video autoplay muted loop id="myVideo">
-  <source src="https://itz-marcus.github.io/Capstone-images/bg-video.mp4" type="video/mp4">
+  <source src="https://itz-marcus.github.io/Capstone-images/bg-video.mp4" type="video/mp4" loading="eager">
 </video>
-<h1>heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h1>
+<h1>heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h1>
 <h1>heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h1>
 <h1>heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h1>
 <h1>heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h1>
