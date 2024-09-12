@@ -18,7 +18,7 @@ export default {
     
 }
 </script>
-<style>
+<style scoped>
 #navbar{
   display: flex;
   /* justify-content: space-evenly; */
@@ -33,7 +33,7 @@ export default {
 
 #logo{
 object-fit: contain;
-width: 10vw;
+width: 14vw;
 padding-left: 3vw;
 margin-top: 1.5vw;
 }
@@ -54,7 +54,7 @@ margin-top: 1.5vw;
 
 #mainNav a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight:500;
   color: black;
   margin-left: auto;
   margin-right: auto;
@@ -75,7 +75,6 @@ margin-top: 1.5vw;
 
 #secNav a {
   text-decoration: none;
-  font-weight: bold;
   color: #ffffff;
   margin-left: auto;
   margin-right: auto;
