@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use(cors({
     // origin: 'https://pivot-prj.web.app',
-    origin: 'https://localhost:8080',
+    origin: 'http://localhost:8080',
     credentials:true
     
 }))
