@@ -12,7 +12,7 @@
       <div id="ad">
         <div>
           <h1>hi hi</h1>
-          <p>bbbbbbbbbbbbbbbrrrrrrrrrrrrrrrrrrr</p>
+          <p>bbbbbbbbbbbbbbbrrrrrrrrrrrrrrrrrr</p>
         </div>
         <div>
           <h1>heeeeeeeeeeeeeeeeeeeeeeee</h1>
