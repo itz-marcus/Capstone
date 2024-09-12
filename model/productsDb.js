@@ -10,11 +10,11 @@ const getProductByIdDb = async(id)=>{
     return data
 }
 
-const insertProductDb = async(prodName,prodDesc,prodPrice,prodImage)=>{
+const insertProductDb = async(prodName,prodDesc,prodPrice,prodImage,prodBrand)=>{
     let [data] = await pool.query(`
-        INSERT INTO products (prodName,prodDesc,prodPrice,prodImage)
-        VALUES (?,?,?,?)`,
-        [prodName,prodDesc,prodPrice,prodImage]
+        INSERT INTO products (prodName,prodDesc,prodPrice,prodImage,prodBrand)
+        VALUES (?,?,?,?,?)`,
+        [prodName,prodDesc,prodPrice,prodImage,prodBrand]
     )
 }
 
@@ -25,9 +25,9 @@ const deleteProductDb = async(id)=>{
 )
 }
 
-const updateProductDb = async(prodName,prodDesc,prodPrice,prodImage,id)=>{
+const updateProductDb = async(prodName,prodDesc,prodPrice,prodImage,prodBrand,id)=>{
     await pool.query(`
-        UPDATE products SET prodName = ?,prodDesc =?,prodPrice = ?,prodImage = ? WHERE prodID = ?`,[prodName,prodDesc,prodPrice,prodImage,id])
+        UPDATE products SET prodName = ?, prodDesc =?, prodPrice = ?, prodImage = ?, prodBrand = ? WHERE prodID = ?`,[prodName,prodDesc,prodPrice,prodImage,prodBrand,id])
 }
 
 const addToCartDb = async(id_prod,id_user)=>{

@@ -11,8 +11,8 @@ const fetchProductById = async(req,res)=>{
 }
 
 const insertProduct = async(req,res)=>{
-    let {prodName,prodDesc,prodPrice,prodImage} = req.body
-        await insertProductDb(prodName,prodDesc,prodPrice,prodImage)
+    let {prodName,prodDesc,prodPrice,prodImage,prodBrand} = req.body
+        await insertProductDb(prodName,prodDesc,prodPrice,prodImage,prodBrand)
         res.send(await getProductsDb())
         console.log('Data was inserted successfully')
 }
@@ -25,7 +25,7 @@ const deleteProduct = async(req,res)=>{
 
 const updateProduct = async(req,res)=>{
     
-    let {prodName,prodDesc,prodPrice,prodImage} = req.body
+    let {prodName,prodDesc,prodPrice,prodImage,prodBrand} = req.body
 
     let Product = await getProductByIdDb(req.params.id) 
     
@@ -33,7 +33,8 @@ const updateProduct = async(req,res)=>{
     prodDesc ? prodDesc=prodDesc: prodDesc = Product.prodDesc
     prodPrice ? prodPrice=prodPrice: prodPrice = Product.prodPrice
     prodImage ? prodImage=prodImage: prodImage = Product.prodImage
-    await updateProductDb(prodName,prodDesc,prodPrice,prodImage,req.params.id)
+    prodBrand ? prodBrand=prodBrand: prodBrand = Product.prodBrand
+    await updateProductDb(prodName,prodDesc,prodPrice,prodImage,prodBrand,req.params.id)
     res.send(await getProductsDb())
 }
 
