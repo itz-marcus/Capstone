@@ -1,7 +1,14 @@
 <template>
-  <navbar-comp/>
-  <router-view/>
-  <footer-comp/>
+  <div id="page-container">
+    <navbar-comp/>
+    <div id="content-wrap">
+      <router-view/>
+    </div>
+    <div>
+      <footer-comp/>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -24,8 +31,7 @@ export default {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
+  }
   #app {
   font-family: "Work Sans";
   -webkit-font-smoothing: antialiased;
@@ -38,5 +44,12 @@ export default {
 body{
   background-color: #E76F51;
 }
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
 
+#content-wrap {
+  padding-bottom: 10vw;
+}
 </style>

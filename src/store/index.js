@@ -26,16 +26,16 @@ export default createStore({
   },
   actions: {
     async fetchUser({commit}){
-      let data = await fetch('https://capstone-1-0lcp.onrender.com/user')
+      let data = await fetch('https://capstone-1-0lcp.onrender.com/users')
       let users = await data.json()
       commit('setUsers', users);
     },
     async insertUser({commit},info){
-      let data = await axios.post('https://capstone-1-0lcp.onrender.com/user/insert',info)
+      let data = await axios.post('https://capstone-1-0lcp.onrender.com/users/insert',info)
       console.log(data);
     },
     async loginUser({commit},info){
-      let {data} = await axios.post(`https://capstone-1-0lcp.onrender.com/user/login`,info)
+      let {data} = await axios.post(`https://capstone-1-0lcp.onrender.com/users/login`,info)
       console.log(data);
       $cookies.set('token', data.token)
       if (data.message) {

@@ -1,6 +1,6 @@
 <template>
     <div id="navbar">
-      <img id="logo" src="https://itz-marcus.github.io/Capstone-images/Logo.png" alt="">
+      <img id="logo" src="https://itz-marcus.github.io/Capstone-images/Logo.png">
       <nav id="mainNav">
         <router-link to="/">Home</router-link>
         <router-link to="/about">About us</router-link>
@@ -19,16 +19,15 @@ export default {
 }
 </script>
 <style scoped>
-#navbar{
+  #navbar{
   display: flex;
-  /* justify-content: space-evenly; */
   margin-left: auto;
   margin-right: auto;
-  position: sticky;
+  position:sticky;
   top: 0;
   overflow: hidden;
   backdrop-filter: blur(2px);
-  
+  z-index:1;
 }
 
 #logo{
@@ -78,6 +77,11 @@ margin-top: 1.5vw;
   color: #ffffff;
   margin-left: auto;
   margin-right: auto;
+}
+
+#mainNav a:hover {
+  color: #E76F51;
+  transition: 0.3s;
 }
 
 #mainNav a.router-link-exact-active {

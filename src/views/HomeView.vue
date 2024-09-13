@@ -6,13 +6,16 @@
     <div id="home_title">
       <span id="title">SKATE WITH OUR <b>LIMITED</b> EDITION SHOES</span>
     </div>
-    <button class="button">Explore more</button>
+    <router-link to="/products"><button class="button">Explore more</button></router-link>
+    
 
     <div id="mid-sec">
       <div id="ad">
         <div id="ad_text">
-          <h1 >hi hi</h1>
-          <p>bbbbbbbbbbbbbbbrrrrrrrrrrrrrrrrrr</p>
+          <h1 id="ad-title">T-FUNK and DC Colab shoe
+            available right now! </h1>
+          <p>Armed with an arsenal of spray paint, Tristan Funkhouser designed his own colorway of one of his favourite shoes, the Trase Slip-on S. Featuring slip on comfort and a SUPER SUEDE™ upper for added durability</p>
+          <button class="ad_button">View Shoe</button>
         </div>
         <div>
           <img id="add_img" src="https://itz-marcus.github.io/Capstone-images/add_image.png">
@@ -26,7 +29,7 @@
 // @ is an alias to /src
 
 </script>
-<style>
+<style scoped>
 .home{
   object-fit: contain !important;
 }
@@ -37,6 +40,9 @@
   min-width: 100vw; 
   min-height: 100vh;
   z-index: -1;
+}
+a{
+  text-decoration: none;
 }
 #home_title{
   font-family: "Anton";
@@ -71,7 +77,7 @@
   margin-left: 10vw;
   width: 13vw;
   font-weight: bold;
-  font-size:1.2vw
+  font-size:1.2vw;
 }
 
 .button:hover {
@@ -107,12 +113,54 @@
 }
 #ad_text{
   font-size: 1.5vw;
+  margin-left: 4vw ;
+  text-align: start;
 }
 #add_img{
   object-fit: contain;
-  width: 35vw;
+  width: 36vw;
   display: flex;
-  padding-top: 3vw;
-  margin-left: 20vw;
+  padding-top: 2vw;
+  margin-left: 8vw;
 }
+#ad-title{
+  font-family: "Anton";
+  font-size: 3.5vw ;
+  margin-top: 3vw;
+}
+#ad_text p{
+  font-weight: 450;
+  line-height: 1.3;
+}
+/* ad button */
+.ad_button {
+  --bg: #E9C46A;
+  --hover-bg: #000000;
+  --hover-text: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 30px;
+  padding: 0.8em 2.6em;
+  background: var(--bg);
+  transition: 0.2s;
+  display: flex;
+  width: 13vw;
+  font-weight: bold;
+  font-size:1.2vw;
+}
+
+.ad_button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.ad_button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* ad button */
 </style>
