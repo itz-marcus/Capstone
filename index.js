@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 app.use(express.static('public'))
 app.use(cors({
-    origin: 'https://pivot-prj.web.app',
+    origin: ['https://capstone-pivot.web.app','http://localhost:8080'],
     credentials:true
     
 }))
