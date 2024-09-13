@@ -1,7 +1,6 @@
 <template>
     <div v-if="products() ">
         <section v-for="product in products()" :key="product">
-            {{ product.prodID }}
             {{ product.prodName }}
             {{ product.prodDesc }}
             {{ product.prodPrice }}

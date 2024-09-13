@@ -10,12 +10,12 @@
 
     <div id="mid-sec">
       <div id="ad">
-        <div>
-          <h1>hi hi</h1>
+        <div id="ad_text">
+          <h1 >hi hi</h1>
           <p>bbbbbbbbbbbbbbbrrrrrrrrrrrrrrrrrr</p>
         </div>
         <div>
-          <h1>heeeeeeeeeeeeeeeeeeeeeeee</h1>
+          <img id="add_img" src="https://itz-marcus.github.io/Capstone-images/add_image.png">
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@
   margin-top: 5vw;
   background-color: #E76F51;
   width: 100vw;
-  height: 30vw;
+  height: 120vw;
 }
 #ad{
   top: -2vw;
@@ -104,5 +104,15 @@
   position: relative;
   display: flex;
   justify-content: space-evenly;
+}
+#ad_text{
+  font-size: 1.5vw;
+}
+#add_img{
+  object-fit: contain;
+  width: 35vw;
+  display: flex;
+  padding-top: 3vw;
+  margin-left: 20vw;
 }
 </style>
