@@ -30,7 +30,8 @@
         <br>
         <button @click="loginUser()">Login</button>
     </div>
-    <div v-if="$cookies.get('token')">
+    <!-- v-if="$cookies.get('token')" -->
+    <div>
         <button><router-link to="/admin">Admin</router-link></button>
     </div>
 </template>
